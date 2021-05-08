@@ -1,0 +1,134 @@
+
+@charset "UTF-8";
+// カラー
+
+$color_main: #edf2f7;
+$color_black: #111;
+$color_white: #fff;
+$color_gray: #666;
+$color_blue: #3ea8ff;
+$color_red: #f20544;
+
+// size
+$size_0: 0;
+$size_half: 4px;
+$size_1: 8px;
+$size_2: 16px;
+$size_3: 24px;
+$size_4: 32px;
+$size_5: 48px;
+$size_6: 64px;
+$size_7: 96px;
+$size_8: 128px;
+$size_9: 192px;
+$size_10: 256px;
+$size_max: 960px;
+$size_10: 256px;
+$size_10: 256px;
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+font-family: toppan-bunkyu-midashi-go-std,
+sans-serif;
+font-weight: 900;
+font-style: normal;
+}
+
+input,
+select,
+textarea,
+button {
+     font-family: tbcinergothic-std,
+     sans-serif;
+     font-weight: 600;
+     font-style: normal;
+}
+
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+&::hover{
+    background: #0066CC;
+    color:#fff;
+}}
+
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sec,
+#timer{
+
+font-size: 64px;
+letter-spacing: 0.25em;
+font-family: toppan-bunkyu-midashi-go-std,
+sans-serif;
+font-weight: 900;
+font-style: normal;
+}
+
+.input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+}
+
+.btn {
+    /*周りの凹み*/
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: rgba(3, 169, 244, 0.54);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    background: #f7f7f7;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn i {
+    /*ボタン自体*/
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    left: 10px;
+    top: 9px;
+    border-radius: 50%;
+    font-size: 40px;
+    background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #b5b5b5;
+}
+
+.btn .far:active {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #d8d8d8;
+}

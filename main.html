@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'fbb1zkw',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+  </script>
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <form>
+    <div class=input>
+      <label for="birthday_input"><i class="fas fa-birthday-cake"></i>誕生日を入力</label>
+      <input id="birthday_input" type="date" name="birthday" required value="1990-04-01" min="1900-04-01">
+    </div>
+    <div class=input>
+      <label for="limit_input">いつまで生きる？</label>
+
+      <input id="limit_input" type="date" name="limitdate" required value="2025-04-01" min="2021-04-01">
+
+    </div>
+    <div>
+      <button class="btn" id="submit" type="submit" form="myform"><i class="fas fa-play"></i></button>
+
+
+</a>
+    </div>
+
+  </form>
+  <p><span id="life"></span>秒生きました </p>
+  <p>残りは<span id="limit"></span>秒</p>
+
+  <ul>
+    <li class="btn" id="save"><i class="fas fa-save"></i></li>
+    <li class="btn" id="clear"><i class="far fa-trash-alt"></i></li>
+  </ul>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="memo.js"></script>
+</body>
+
+</html>
