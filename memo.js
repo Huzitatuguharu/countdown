@@ -5,18 +5,12 @@
 // time2：date3-date2
 
 // 送信ボタンをクリックしたあとの動作
-
-// 3. ページ読み込み： 保存データ取得表示
 if (localStorage.getItem('date1') || localStorage.getItem('date3')) { // 値が保存されていれば
   let date1 = localStorage.getItem('date1'); // データ取得
   let date3 = localStorage.getItem('date3'); // データ取得
   console.log(date3)
-
   date1 = parseInt(date1);
   date3 = parseInt(date3);
-
-  console.log(date1)
-  console.log(date3)
 
   $(function () {
     // 誕生日を取得
@@ -39,7 +33,8 @@ if (localStorage.getItem('date1') || localStorage.getItem('date3')) { // 値が�
     // 現在－生年月日で何秒間生きたか
     let time2 = date3 - date2;
     document.getElementById("limit").textContent = String(time2)
-
+    $('#limit').prepend('<p class="add">Future</p>');
+    $('#life').prepend('<p class="add">Past</p>');
   }
 } else {
   $('#submit').on('click', function () {
@@ -65,15 +60,14 @@ if (localStorage.getItem('date1') || localStorage.getItem('date3')) { // 値が�
     date2 = Math.floor(now / 1000);
     let time1 = date2 - date1;
     document.getElementById("life").textContent = String(time1)
+    $('#life').prepend('<p class="add">Past</p>');
 
     // 現在－生年月日で何秒間生きたか
     let time2 = date3 - date2;
     document.getElementById("limit").textContent = String(time2)
-
+    $('#limit').prepend('<p class="add">Future</p>');
   }
 }
-
-
 //1.Save クリックイベント
 $('#save').on('click', function () {
   localStorage.setItem('date1', date1);
@@ -82,10 +76,6 @@ $('#save').on('click', function () {
   console.log(date1);
   console.log(date3);
 });
-
-
-
-
 //2.clear クリックイベント
 
 $('#clear').on('click', function () {
@@ -97,3 +87,29 @@ $('#clear').on('click', function () {
 
   location.reload();
 });
+
+// モーダル
+
+function popupImage() {
+  let popup = document.getElementById('js-popup');
+  if (!popup) return;
+
+  let blackBg = document.getElementById('js-black-bg');
+  let closeBtn = document.getElementById('js-close-btn');
+  let showBtn = document.getElementById('info');
+
+  closePopUp(blackBg);
+  closePopUp(closeBtn);
+  closePopUp(showBtn);
+
+  function closePopUp(elem) {
+    if (!elem) return;
+    elem.addEventListener('click', function () {
+      popup.classList.toggle('is-show');
+    });
+  }
+}
+popupImage();
+
+
+// ここから隠し

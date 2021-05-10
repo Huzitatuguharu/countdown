@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Countdown</title>
+  <link rel="stylesheet" href="css/kakushi.css">
+  <title>Gs</title>
+
     <link rel="icon" type="image/x-icon" href="img/アイコン.svg">
 
   <!-- フォント -->
@@ -52,55 +53,46 @@
 
   <header>
     <h1>
-      CountdowN
+      G’s ACADEMY
     </h1>
   </header>
   <main class=content>
-    <form>
-      <div class=input>
-        <label for="birthday_input">BIRTHDAY</label>
-        <input id="birthday_input" type="date" name="birthday" required value="1933-12-01" min="1900-04-01">
-      </div>
-      <div class=input>
-        <label for="limit_input">DAY OF DEATH</label>
-        <input id="limit_input" type="date" name="limitdate" required value="2112-09-03" min="2021-04-01">
-      </div>
-    </form>
-    <p><span id="life"></span></p>
-    <p><span id="limit"></span></p>
+
+    <p><span id="hour"></span></p>
+    <p><span id="second"></span></p>
 
     <div class="save_parent">
-      <button class="btn" id="submit" type="submit" form="myform"><i class="fas fa-play"></i></button>
-      <p class="btn" id="save"><i class="fas fa-save"></i></p>
-      <p class="btn" id="clear"><i class="far fa-trash-alt"></i></p>
-      <p class="btn" id="info"><i class="fas fa-question"></i></p>
-      <a id="kakushi" href="kakushi.html">g</a></p>
-
+      <button class="btn" id="submit" type="submit" form="myform"><i class="fas fa-chart-pie"></i></button>
+      <p class="btn" id="info"><i class="fas fa-exclamation"></i></p>
 
     </div>
-
-
+    <div class="chart">
+      <canvas id="myPieChart"></canvas>
+    </div>
     <!-- モーダル -->
     <div class="popup" id="js-popup">
       <div class="popup-inner">
         <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
-        <h2 class="modal_icon"><img src="img/アイコン.svg" alt=""></h2>
-        <p>Enter the two dates below</p>
-        <p> <i class="fas fa-hourglass-start righticon"></i>Birthday</p>
-        <p><i class="fas fa-hourglass-end righticon"></i>Expected date of death</p>
+        <p><i class="fas fa-graduation-cap fa-2x"></i></p>
+        <h2>2021/9/30 23:59</h2>
+        <p>あと＊＊＊時間</p>
+        <p>カウントダウン</p>
         <div class="btn_info">
-          <p><i class="far fa-play-circle  righticon"></i>:　start</p>
-          <p><i class="fas fa-save  righticon"></i>:　save</p>
-          <p><i class="far fa-trash-alt righticon"></i>:　clear</p>
+          <p><i class="fas fa-chart-pie righticon"></i>:　円グラフ表示</p>
         </div>
       </div>
       <div class="black-background" id="js-black-bg"></div>
     </div>
 
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>
+      dayjs().format()
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="memo.js"></script>
+    <script src="kakushi.js"></script>
 </body>
 
 </html>

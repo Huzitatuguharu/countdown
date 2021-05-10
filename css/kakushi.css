@@ -16,53 +16,26 @@ input {
   outline: none;
 }
 
-a {
-  text-decoration: none;
-  outline: none;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: abadi, sans-serif;
-  font-weight: 400;
+  font-family: yorkten-slab-condensed, sans-serif;
+  font-weight: 900;
   font-style: normal;
   text-align: center;
   color: #1c1c1c;
 }
 
-input,
-select,
-textarea {
-  font-family: abadi, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 0.2em;
-}
-
-label {
-  font-family: abadi, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-  font-size: 16px;
-  margin-bottom: 8px;
-  letter-spacing: 0.15em;
-}
-
 h1 {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   text-align: center;
-  letter-spacing: 0.05em;
-  font-family: p22-fllw-eaglefeather-sc, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-family: yorkten-slab-condensed, sans-serif;
+  letter-spacing: 0.1em;
+  margin: 36px;
 }
 
 h2 {
@@ -83,38 +56,20 @@ form {
   flex-direction: column;
 }
 
-#life {
-  font-size: 56px;
-  letter-spacing: 0.3em;
-  font-family: p22-fllw-eaglefeather-sc, sans-serif;
-  font-weight: 400;
+#hour {
+  font-size: 40px;
+  letter-spacing: 0.25em;
+  font-family: yorkten-slab-condensed, sans-serif;
+  font-weight: 900;
   font-style: normal;
 }
 
-#limit {
-  font-size: 56px;
-  letter-spacing: 0.3em;
-  font-family: p22-fllw-eaglefeather-sc, sans-serif;
-  font-weight: 700;
+#second {
+  font-size: 40px;
+  letter-spacing: 0.25em;
+  font-family: yorkten-slab-condensed, sans-serif;
+  font-weight: 900;
   font-style: normal;
-}
-
-label,
-#limit_input,
-#birthday_input {
-  cursor: pointer;
-}
-
-.input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 24px;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
 }
 
 .btn {
@@ -151,21 +106,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .add {
-  font-size: 18px;
-  letter-spacing: 0.1em;
+  font-size: 24px;
+  letter-spacing: -0.05em;
   font-weight: 400;
-  letter-spacing: 0.1em;
-  font-family: p22-fllw-eaglefeather-inf, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+}
+
+.chart {
+  margin: 24px;
 }
 
 .popup {
-  font-family: abadi, sans-serif;
-  font-weight: 400;
+  font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+  font-weight: 900;
   font-style: normal;
-  letter-spacing: 0.07em;
-  font-size: 24px;
   position: fixed;
   left: 0;
   top: 0;
@@ -175,6 +128,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
   visibility: hidden;
   transition: .6s;
+  color: 1c1c1c;
+}
+
+.popup p {
+  font-family: toppan-bunkyu-gothic-pr6n, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-style: normal;
 }
 
 .popup.is-show {
@@ -188,14 +149,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  max-width: 380px;
+  max-width: 280px;
   padding: 50px;
   background-color: #fff;
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .popup-inner img {
@@ -237,14 +194,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-right: 16px;
 }
 
-#kakushi {
-  color: white;
-  padding-top: 36PX;
+.fa-graduation-cap {
+  margin: 8px;
 }
-
-.modal_icon {
-  width: 48px;
-  height: 48px;
-  text-align: center;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=kakushi.css.map */
